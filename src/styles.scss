@@ -1,0 +1,111 @@
+@use 'primeng/resources/themes/lara-light-blue/theme.css';
+@use 'primeng/resources/primeng.css';
+@use 'primeicons/primeicons.css';
+
+:root {
+  --geidea-green: #3bb54a;
+  --geidea-dark: #1a1a2e;
+  --sidebar-bg: #1a1a2e;
+  --sidebar-text: #a0aec0;
+  --sidebar-active: #3bb54a;
+  --header-bg: #ffffff;
+  --body-bg: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+}
+
+.dark-theme {
+  --header-bg: #1e1e2f;
+  --body-bg: #111827;
+  --card-bg: #1e1e2f;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--body-bg);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+// PrimeNG overrides
+.p-datatable .p-datatable-thead > tr > th {
+  background: var(--card-bg) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: color-mix(in srgb, var(--geidea-green) 5%, var(--card-bg)) !important;
+}
+
+.p-dialog .p-dialog-header {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.p-dialog .p-dialog-content {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+.p-dialog .p-dialog-footer {
+  background: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.p-button.p-button-success {
+  background: var(--geidea-green) !important;
+  border-color: var(--geidea-green) !important;
+}
+
+.p-inputtext, .p-dropdown, .p-select {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.p-card {
+  background: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
